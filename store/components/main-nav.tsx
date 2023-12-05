@@ -1,18 +1,25 @@
 "use client";
 
-import Link from "next/link"
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 import { Category } from "@/types";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import React from "react";
 
 interface MainNavProps {
   data: Category[];
 }
 
-const MainNav: React.FC<MainNavProps> = ({
-  data
-}) => {
+const MainNav: React.FC<MainNavProps> = ({ data }) => {
   const pathname = usePathname();
 
   const routes = data.map((route) => ({
@@ -22,23 +29,31 @@ const MainNav: React.FC<MainNavProps> = ({
   }));
 
   return (
-    <nav
-      className="mx-6 flex items-center space-x-4 lg:space-x-6"
-    >
+    <nav className="mx-6 flex items-center space-x-4 lg:space-x-6">
       {routes.map((route) => (
         <Link
           key={route.href}
           href={route.href}
           className={cn(
-            'text-sm font-medium transition-colors hover:text-black',
-            route.active ? 'text-black' : 'text-neutral-500'
+            "text-sm font-medium transition-colors hover:text-black",
+            route.active ? "text-black" : "text-neutral-500"
           )}
         >
-          {route.label}
-      </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger>{route.label}</DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel>{route.label}</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>Billing</DropdownMenuItem>
+              <DropdownMenuItem>Team</DropdownMenuItem>
+              <DropdownMenuItem>Subscription</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </Link>
       ))}
     </nav>
-  )
+  );
 };
 
 export default MainNav;
