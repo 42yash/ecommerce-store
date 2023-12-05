@@ -48,9 +48,10 @@ const MainNav: React.FC<MainNavProps> = ({
               Yash
             </div>
           )}
+        </div>
       ))}
-        </nav>
-      )
+    </nav>
+  )
 };
 
-      export default MainNav;
+export default MainNav;
