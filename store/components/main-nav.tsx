@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from 'react';
 import Link from "next/link"
 import { usePathname } from "next/navigation";
 
@@ -20,25 +20,37 @@ const MainNav: React.FC<MainNavProps> = ({
     label: route.name,
     active: pathname === `/category/${route.id}`,
   }));
-
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <nav
       className="mx-6 flex items-center space-x-4 lg:space-x-6"
     >
       {routes.map((route) => (
-        <Link
-          key={route.href}
-          href={route.href}
-          className={cn(
-            'text-sm font-medium transition-colors hover:text-black',
-            route.active ? 'text-black' : 'text-neutral-500'
-          )}
+        <div
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
-          {route.label}
-      </Link>
+          <Link
+            key={route.href}
+            href={route.href}
+            className={cn(
+              'text-sm font-medium transition-colors hover:text-black',
+              route.active ? 'text-black' : 'text-neutral-500'
+            )}
+          >
+
+            {route.label}
+
+          </Link>
+
+          {isHovered && (
+            <div className="dropdown">
+              Yash
+            </div>
+          )}
       ))}
-    </nav>
-  )
+        </nav>
+      )
 };
 
-export default MainNav;
+      export default MainNav;
