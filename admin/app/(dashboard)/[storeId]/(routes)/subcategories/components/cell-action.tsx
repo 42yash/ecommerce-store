@@ -17,10 +17,10 @@ import {
 import { useCategoryModal } from "@/hooks/use-category-modal";
 import { AlertModal } from "@/components/modals/alert-modal";
 
-import { CategoryColumn } from "./columns";
+import { SubcategoryColumn } from "./columns";
 
 interface CellActionProps {
-    data: CategoryColumn;
+    data: SubcategoryColumn;
 }
 
 export const CellAction: React.FC<CellActionProps> = ({
@@ -34,11 +34,11 @@ export const CellAction: React.FC<CellActionProps> = ({
     const onConfirm = async () => {
         try {
             setLoading(true);
-            await axios.delete(`/api/${params.storeId}/categories/${data.id}`);
-            toast.success('Category deleted.');
+            await axios.delete(`/api/${params.storeId}/subcategories/${data.id}`);
+            toast.success('Subcategory deleted.');
             router.refresh();
         } catch (error) {
-            toast.error('Make sure you removed all products using this category first.');
+            toast.error('Make sure you removed all products using this subcategory first.');
         } finally {
             setOpen(false);
             setLoading(false);
@@ -47,7 +47,7 @@ export const CellAction: React.FC<CellActionProps> = ({
 
     const onCopy = (id: string) => {
         navigator.clipboard.writeText(id);
-        toast.success('Category ID copied to clipboard.');
+        toast.success('Subcategory ID copied to clipboard.');
     }
 
     return (
@@ -73,7 +73,7 @@ export const CellAction: React.FC<CellActionProps> = ({
                         <Copy className="mr-2 h-4 w-4" /> Copy Id
                     </DropdownMenuItem>
                     <DropdownMenuItem
-                        onClick={() => router.push(`/${params.storeId}/categories/${data.id}`)}
+                        onClick={() => router.push(`/${params.storeId}/subcategories/${data.id}`)}
                     >
                         <Edit className="mr-2 h-4 w-4" /> Update
                     </DropdownMenuItem>
