@@ -1,5 +1,6 @@
 "use client";
 
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -13,7 +14,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import React from "react";
+import React, { useState } from "react";
 
 interface MainNavProps {
   data: Category[];
