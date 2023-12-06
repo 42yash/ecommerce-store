@@ -77,7 +77,13 @@ export const CellAction: React.FC<CellActionProps> = ({
             <Edit className="mr-2 h-4 w-4" /> Update
           </DropdownMenuItem>
           <DropdownMenuItem
-            onClick={() => setOpen(true)}
+            onClick={() => {
+              if (data.label !== 'HomePage') {
+                setOpen(true);
+              } else {
+                alert('Cannot be deleted. Please edit instead.');
+              }
+            }}
           >
             <Trash className="mr-2 h-4 w-4" /> Delete
           </DropdownMenuItem>
