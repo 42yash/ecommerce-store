@@ -78,7 +78,7 @@ export const CellAction: React.FC<CellActionProps> = ({
           </DropdownMenuItem>
           <DropdownMenuItem
             onClick={() => {
-              if (data.label !== 'HomePage') {
+              if (data.id !== process.env.NEXT_PUBLIC_HOMEPAGE_BILLBOARD_ID) {
                 setOpen(true);
               } else {
                 alert('Cannot be deleted. Please edit instead.');
