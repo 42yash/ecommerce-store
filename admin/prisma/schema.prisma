@@ -42,7 +42,7 @@ model Category {
   store         Store         @relation("StoreToCategory", fields: [storeId], references: [id])
   billboardId   String // Foreign Key to Billboard
   billboard     Billboard     @relation(fields: [billboardId], references: [id])
-  Subcategories Subcategory[]
+  subcategories Subcategory[]
   name          String
   products      Product[]     @relation("CategoryToProduct")
   createdAt     DateTime      @default(now())

@@ -29,6 +29,11 @@ export function MainNav({
       active: pathname === `/${params.storeId}/categories`,
     },
     {
+      href: `/${params.storeId}/subcategories`, // Added subcategories route
+      label: 'Subcategories', // Added subcategories label
+      active: pathname === `/${params.storeId}/subcategories`, // Added subcategories active check
+    },
+    {
       href: `/${params.storeId}/sizes`,
       label: 'Sizes',
       active: pathname === `/${params.storeId}/sizes`,
@@ -70,7 +75,7 @@ export function MainNav({
           )}
         >
           {route.label}
-      </Link>
+        </Link>
       ))}
     </nav>
   )

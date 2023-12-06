@@ -1,11 +1,6 @@
 "use client";
-<<<<<<< HEAD
 
 import Link from "next/link";
-=======
-import { useState } from 'react';
-import Link from "next/link"
->>>>>>> fca515b780b39435540ee844220858260fcbbb1c
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
