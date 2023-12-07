@@ -100,7 +100,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
         colorId: "",
         sizeId: "",
         isFeatured: false,
-
+        isTrending: false,
         isArchived: false,
       };
 
