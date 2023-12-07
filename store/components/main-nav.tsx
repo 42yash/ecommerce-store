@@ -1,19 +1,11 @@
 "use client";
 
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 import { Category } from "@/types";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+
 import React, { useState } from "react";
 
 interface MainNavProps {
@@ -28,33 +20,20 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
     label: route.name,
     active: pathname === `/category/${route.id}`,
   }));
-  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <nav className="mx-6 flex items-center space-x-4 lg:space-x-6">
       {routes.map((route) => (
-        <div
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          <Link
-            key={route.href}
-            href={route.href}
-            className={cn(
-              'text-sm font-medium transition-colors hover:text-black',
-              route.active ? 'text-black' : 'text-neutral-500'
-            )}
-          >
-
-            {route.label}
-
-          </Link>
-
-          {isHovered && (
-            <div className="dropdown">
-              Yash
-            </div>
+        <Link
+          key={route.href}
+          href={route.href}
+          className={cn(
+            "text-sm font-medium transition-colors hover:text-black",
+            route.active ? "text-black" : "text-neutral-500"
           )}
-        </div>
+        >
+          {route.label}
+        </Link>
       ))}
     </nav>
   );

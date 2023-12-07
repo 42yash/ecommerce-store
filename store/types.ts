@@ -1,6 +1,7 @@
 export interface Product {
   id: string;
   category: Category;
+  subcategory: Subcategory;
   name: string;
   price: string;
   isFeatured: boolean;
@@ -25,6 +26,11 @@ export interface Category {
   id: string;
   name: string;
   billboard: Billboard;
+};
+export interface Subcategory {
+  id: string;
+  name: string;
+  category: Category;
 };
 
 export interface Size {
