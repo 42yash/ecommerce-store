@@ -30,6 +30,7 @@ export interface Category {
 export interface Subcategory {
   id: string;
   name: string;
+  value: string;
   category: Category;
 };
 
