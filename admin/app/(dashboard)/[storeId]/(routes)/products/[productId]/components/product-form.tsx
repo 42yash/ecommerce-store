@@ -223,6 +223,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                     <FormLabel>Description</FormLabel>
                     <FormControl>
                       <Input
+                        type="textarea"
                         disabled={loading}
                         placeholder="Product description"
                         {...field}
