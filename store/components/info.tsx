@@ -46,11 +46,9 @@ const Info: React.FC<InfoProps> = ({ data }) => {
           <ShoppingCart size={20} />
         </Button>
       </div>
-      <div className="mt-3 flex items-end justify-between">
-        <p className="text-2xl text-gray-900">
-          <Currency value={data?.description} />
-        </p>
-      </div>
+      <p className="text-xl mt-10 justify-between font-italics text-gray-900">
+        {data.description}
+      </p>
     </div>
   );
 };
