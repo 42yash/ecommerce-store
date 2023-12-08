@@ -93,7 +93,7 @@ export async function PATCH(
     if (!name) {
       return new NextResponse("Name is required", { status: 400 });
     }
-    if (!description {
+    if (!description) {
       return new NextResponse("Description is required", { status: 400 });
     }
 
