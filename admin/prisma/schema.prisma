@@ -69,6 +69,7 @@ model Subcategory {
 
 model Product {
   id            String      @id @default(uuid())
+  description   String
   storeId       String // Foreign Key to Store
   store         Store       @relation("StoreToProduct", fields: [storeId], references: [id])
   categoryId    String // Foreign Key to Category
