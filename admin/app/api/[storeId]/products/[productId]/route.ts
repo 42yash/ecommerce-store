@@ -80,7 +80,7 @@ export async function PATCH(
 
     const body = await req.json();
 
-    const { name, price, categoryId,subcategoryId, images, colorId, sizeId, isFeatured, isTrending, isArchived } = body;
+    const { name, description,price, categoryId,subcategoryId, images, colorId, sizeId, isFeatured, isTrending, isArchived } = body;
 
     if (!userId) {
       return new NextResponse("Unauthenticated", { status: 403 });
@@ -92,6 +92,9 @@ export async function PATCH(
 
     if (!name) {
       return new NextResponse("Name is required", { status: 400 });
+    }
+    if (!description {
+      return new NextResponse("Description is required", { status: 400 });
     }
 
     if (!images || !images.length) {
@@ -133,6 +136,7 @@ export async function PATCH(
       },
       data: {
         name,
+        description,
         price,
         categoryId,
         subcategoryId,
