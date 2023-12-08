@@ -52,7 +52,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
             <MobileFilters
               sizes={sizes}
               colors={colors}
-              subcategories={[subcategory]}
+              subcategories={subcategory}
             />
             <div className="hidden lg:block">
               <Filter valueKey="sizeId" name="Sizes" data={sizes} />
@@ -60,7 +60,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
               <Filter
                 valueKey="subcategoryId"
                 name="Subcatergories"
-                data={[subcategory]}
+                data={subcategory}
               />
             </div>
             <div className="mt-6 lg:col-span-4 lg:mt-0">
