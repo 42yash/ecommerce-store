@@ -5,7 +5,8 @@ const nextConfig = {
       "tailwindui.com",
       "res.cloudinary.com"
     ]
-  }
+  },
+  swcMinify: false
 }
 
 module.exports = nextConfig
