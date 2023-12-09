@@ -1,12 +1,21 @@
+import useCart from "@/hooks/use-cart";
+
 interface CartItemInfoProps {
   product: Record<string, any>;
 }
 
 const CartItemInfo: React.FC<CartItemInfoProps> = ({ product }) => {
+  const { items } = useCart();
+  const cartItem = items.find((item) => item.id === product.id);
+  const quantity = cartItem ? cartItem.quantity : 0;
+
   return (
     <div>
       <div className="flex justify-between">
         <p className=" text-sm font-semibold text-black">{product.name}</p>
+        <p className=" text-sm font-semibold text-black">
+          Quantity: {quantity}
+        </p>
       </div>
 
       <div className="mt-1 flex text-sm">

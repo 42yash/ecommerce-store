@@ -1,8 +1,9 @@
 import React from "react";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <footer className="bg-white border-t ">
@@ -30,10 +31,10 @@ const Footer = () => {
               General Information
             </p>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-              Policies
+              Privacy Policy
             </li>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-              Terms & Conditions
+              Terms of Services
             </li>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
               Return Policy
@@ -52,22 +53,28 @@ const Footer = () => {
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
               Pricing
             </li>
-            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-              Careers
-            </li>
-            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-              Press & Media
-            </li>
           </ul>
         </div>
         <div className="p-5">
           <ul>
             <p className="text-gray-800 font-bold text-xl pb-4">Contact </p>
             <div className="flex flex-row gap-2 items-right">
-              <FaInstagram className="text-2xl cursor-pointer hover:text-yellow-600" />
-              <FaTwitter className="text-2xl cursor-pointer hover:text-blue-600" />
-              <FaLinkedin className="text-2xl cursor-pointer hover:text-blue-600" />
-              <FaYoutube className="text-2xl cursor-pointer hover:text-red-600" />
+              <FaInstagram
+                href=""
+                className="text-2xl cursor-pointer hover:text-purple-600"
+              />
+              <FaTwitter
+                href=""
+                className="text-2xl cursor-pointer hover:text-blue-600"
+              />
+              <FaWhatsapp
+                href=""
+                className="text-2xl cursor-pointer hover:text-green-600"
+              />
+              <FaFacebook
+                href=""
+                className="text-2xl cursor-pointer hover:text-blue-400"
+              />
             </div>
           </ul>
         </div>
