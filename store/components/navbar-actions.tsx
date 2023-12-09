@@ -31,7 +31,7 @@ const NavbarActions = () => {
       >
         <ShoppingBag size={20} color="purple" />
         <span className="ml-2 text-sm font-medium text-purple-500">
-          {cart.items.length}
+          {cart.getTotalItems()}
         </span>
       </Button>
 
