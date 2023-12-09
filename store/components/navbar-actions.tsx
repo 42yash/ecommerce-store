@@ -30,7 +30,7 @@ const NavbarActions = () => {
         className="flex items-center rounded-full bg-white px-4 py-2"
       >
         <ShoppingBag size={20} color="purple" />
-        <span className="ml-2 text-sm font-medium text-purple-200">
+        <span className="ml-2 text-sm font-medium text-purple-500">
           {cart.items.length}
         </span>
       </Button>
