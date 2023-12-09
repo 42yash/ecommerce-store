@@ -34,12 +34,8 @@ const NavbarActions = () => {
           {cart.items.length}
         </span>
       </Button>
-      <Button
-        onClick={() => router.push("/sign-in")}
-        className="flex items-center rounded-full bg-black px-4 py-2"
-      >
-        <LoginPage />
-      </Button>
+
+      <LoginPage />
     </div>
   );
 };
