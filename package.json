@@ -4,5 +4,8 @@
   },
   "scripts": {
     "dev": "concurrently \"npm run dev --prefix admin\" \"npm run dev --prefix store\""
+  },
+  "dependencies": {
+    "react-icons": "^4.12.0"
   }
 }
