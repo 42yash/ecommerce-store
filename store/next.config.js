@@ -6,7 +6,8 @@ const nextConfig = {
       "res.cloudinary.com"
     ]
   },
-  swcMinify: false
+  swcMinify: false,
+  reactStrictMode: true,
 }
 
 module.exports = nextConfig
