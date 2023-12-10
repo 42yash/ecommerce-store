@@ -21,7 +21,7 @@ const Navbar = async () => {
           <div className="hidden lg:block">
             <MainNav data={categories} />
           </div>
-          <div className="lg:hidden">
+          <div className="lg:hidden flex flex-col">
             <MobileMainNav data={categories} />
           </div>
           <NavbarActions />

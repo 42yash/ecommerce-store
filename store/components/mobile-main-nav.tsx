@@ -45,7 +45,7 @@ const MobileMainNav: React.FC<MobileMainNavsProps> = ({ data }) => {
               <IconButton icon={<X size={15} />} onClick={onClose} />
             </div>
 
-            <div className="p-4">
+            <div className="p-4 flex flex-col space-y-4">
               <MainNav data={data} />
             </div>
           </Dialog.Panel>
