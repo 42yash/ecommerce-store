@@ -8,6 +8,7 @@ import Button from "@/components/ui/button";
 import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import { toast } from "react-hot-toast";
+type totalPrice = number;
 
 const Summary = () => {
   const searchParams = useSearchParams();
@@ -61,5 +62,7 @@ const Summary = () => {
     </div>
   );
 };
+
+export { totalPrice };
 
 export default Summary;

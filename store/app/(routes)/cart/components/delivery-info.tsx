@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Cashfree from "cashfree-pg";
 
 const DeliveryForm = () => {
   const [formData, setFormData] = useState({
@@ -20,10 +21,11 @@ const DeliveryForm = () => {
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
-  };
+    
+    Cashfree.XClientId = `${process.env.CASHFREE_APP_ID}`;
+    Cashfree.XClientSecret = `${process.env.CASHFREE_SECRET_KEY}`;
+    Cashfree.XEnvironment = Cashfree.Environment.PRODUCTION;
+  }
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col ">
