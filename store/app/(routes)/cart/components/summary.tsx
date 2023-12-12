@@ -56,7 +56,7 @@ const Summary = () => {
         disabled={items.length === 0}
         className="w-full mt-6"
       >
-        Checkout
+        Proceed to Payment
       </Button>
     </div>
   );
