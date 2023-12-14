@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Cashfree from "cashfree-pg";
-import { CartContext } from './cart-context';
+
+import { CartContext } from "./cart-context";
 
 type FormData = {
   firstName: string;
@@ -19,14 +19,16 @@ type DeliveryFormProps = {
   setFormData: React.Dispatch<React.SetStateAction<FormData>>;
 };
 
-const DeliveryForm: React.FC<DeliveryFormProps> = ({ formData, setFormData }) => {
+const DeliveryForm: React.FC<DeliveryFormProps> = ({
+  formData,
+  setFormData,
+}) => {
   const { totalPrice } = React.useContext(CartContext);
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
 
   return (
     <form className="flex flex-col ">
