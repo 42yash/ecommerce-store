@@ -10,6 +10,7 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@cashfreepayments/cashfree-js": "^1.0.4",
     "@clerk/nextjs": "^4.21.3",
     "@hookform/resolvers": "^3.1.1",
     "@prisma/client": "^4.16.1",
@@ -28,8 +29,10 @@
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
+    "api": "^6.1.1",
     "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
+    "cashfree-pg": "^3.0.5",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
     "cmdk": "^0.2.0",
@@ -56,6 +59,7 @@
     "zustand": "^4.3.8"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.11",
     "prisma": "^4.16.1"
   }
 }

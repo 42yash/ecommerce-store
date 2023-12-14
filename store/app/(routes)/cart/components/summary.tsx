@@ -1,20 +1,30 @@
 "use client";
-
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import DeliveryForm from "./delivery-info";
 import Button from "@/components/ui/button";
 import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import { toast } from "react-hot-toast";
+import React from 'react';
 let totalPrice = 0;
 
 const Summary = () => {
   const searchParams = useSearchParams();
   const items = useCart((state) => state.items);
   const removeAll = useCart((state) => state.removeAll);
-
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    floor: "",
+    buildingName: "",
+    streetAddress: "",
+    city: "",
+    state: "",
+    pincode: "",
+  });
   useEffect(() => {
     if (searchParams.get("success")) {
       toast.success("Payment completed.");
@@ -31,19 +41,27 @@ const Summary = () => {
   }, 0);
 
   const onCheckout = async () => {
+
+    const productIds = items.map((item) => item.id);
+    console.log(productIds)
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
       {
-        productIds: items.map((item) => item.id),
+        productIds: productIds,
+        orderData: formData, // Include the form data in the request
+        totalPrice: totalPrice, // Include the total price in the request
       }
-    );
+    ).catch(e => {
+      console.log(e);
+    });
 
-    window.location = response.data.url;
+    // Redirect to Cashfree payment page
+
   };
 
   return (
     <div className="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
-      <DeliveryForm />
+      <DeliveryForm formData={formData} setFormData={setFormData} />
       <h2 className="text-lg font-medium text-gray-900">Order summary</h2>
       <div className="mt-6 space-y-4">
         <div className="flex items-center justify-between border-t border-gray-200 pt-4">

@@ -1,34 +1,35 @@
 import React, { useState } from "react";
 import Cashfree from "cashfree-pg";
+import { CartContext } from './cart-context';
 
-const DeliveryForm = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    phoneNumber: "",
-    floor: "",
-    buildingName: "",
-    streetAddress: "",
-    city: "",
-    state: "",
-    pincode: "",
-  });
+type FormData = {
+  firstName: string;
+  lastName: string;
+  phone: string;
+  floor: string;
+  buildingName: string;
+  streetAddress: string;
+  city: string;
+  state: string;
+  pincode: string;
+};
 
+type DeliveryFormProps = {
+  formData: FormData;
+  setFormData: React.Dispatch<React.SetStateAction<FormData>>;
+};
+
+const DeliveryForm: React.FC<DeliveryFormProps> = ({ formData, setFormData }) => {
+  const { totalPrice } = React.useContext(CartContext);
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    
-    Cashfree.XClientId = `${process.env.CASHFREE_APP_ID}`;
-    Cashfree.XClientSecret = `${process.env.CASHFREE_SECRET_KEY}`;
-    Cashfree.XEnvironment = Cashfree.Environment.PRODUCTION;
-  }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col ">
+    <form className="flex flex-col ">
       <div className="flex flex-row gap-4">
         <input
           type="text"
@@ -54,8 +55,8 @@ const DeliveryForm = () => {
         type="tel"
         className="w-1/2 h-10 items-center text-center mt-4 mx-auto"
         placeholder="Phone Number"
-        name="phoneNumber"
-        value={formData.phoneNumber}
+        name="phone"
+        value={formData.phone}
         onChange={handleChange}
         required
       />
