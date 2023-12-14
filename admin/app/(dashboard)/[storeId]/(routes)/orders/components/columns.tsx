@@ -1,6 +1,5 @@
 "use client"
 
-import { Decimal } from "@prisma/client/runtime";
 import { ColumnDef } from "@tanstack/react-table"
 
 export type OrderColumn = {

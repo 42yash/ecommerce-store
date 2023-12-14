@@ -3,6 +3,7 @@ import prismadb from "@/lib/prismadb";
 import { Cashfree } from "cashfree-pg";
 import * as assert from "assert";
 import { create } from "domain";
+import { link } from "fs";
 
 Cashfree.XClientId = process.env.CASHFREE_APP_ID;
 Cashfree.XClientSecret = process.env.CASHFREE_SECRET_KEY;
@@ -19,6 +20,11 @@ export async function OPTIONS() {
 }
 
 export async function POST(req: Request, { params }: { params: { storeId: string } }) {
+  if (!req) {
+    console.log("Request object is undefined"); // New console.log statement
+    return new NextResponse("Bad Request", { status: 400 });
+  }
+
   const { productIds, orderData, totalPrice } = await req.json();
 
   if (!productIds || productIds.length === 0) {
@@ -57,9 +63,7 @@ export async function POST(req: Request, { params }: { params: { storeId: string
     }
   });
 
-  function createOrder() {
-    console.log("process.env.PG_CLIENT_ID");
-    console.log(process.env.PG_CLIENT_ID);
+  async function createOrder(): Promise<string> {
     var request = {
       "order_amount": totalPrice,
       "order_currency": "INR",
@@ -76,26 +80,38 @@ export async function POST(req: Request, { params }: { params: { storeId: string
       }
     }
 
-
-    var paymentLink = "";
-    var orderId = "";
-    function setOrderDetails(order_id: string, payment_link: string) {
-      orderId = order_id
-      paymentLink = payment_link
+    function getCurrentTimeStamp() {
+      return new Date().getTime();
     }
 
-    Cashfree.PGCreateOrder("2022-09-01", request).then((response) => {
-      assert.equal(response.data.order_amount, request.order_amount, "Amount is not matching")
-      assert.equal(response.data.order_currency, "INR", "Currency is not matching")
-      assert.equal(response.data.customer_details?.customer_id, response.data.customer_details?.customer_id, "Customer id is not matching")
-      assert.equal(response.data.customer_details?.customer_name, response.data.customer_details?.customer_name, "Customer name is not matching")
-      assert.equal(response.data.customer_details?.customer_email, response.data.customer_details?.customer_email, "Customer email is not matching")
-      assert.equal(response.data.customer_details?.customer_phone, response.data.customer_details?.customer_phone, "Customer phone is not matching")
-      setOrderDetails(response.data.order_id!, response.data.payment_session_id!)
-      console.log("Orderid: ", orderId, "\npsi: ", paymentLink)
-    }).catch((error) => {
-      console.log(error)
-    });
+    async function createLink(): Promise<string> {
+      var link_id = "Automated_Test_" + getCurrentTimeStamp()
+      var request = {
+        customer_details: { customer_phone: '9999999999' },
+        link_id: link_id,
+        link_amount: 100,
+        link_currency: 'INR',
+        link_purpose: 'Payment',
+        payment_methods: '',
+        link_notify: {
+          send_sms: false,
+          send_email: true
+        },
+      }
+      return Cashfree.PGCreateLink("2022-09-01", request).then((response) => {
+        return response.data.link_url as string;
+      }).catch((error) => {
+        console.log(error);
+        return "Something Went Wrong - CashFree";
+      });
+    };
+    return await createLink();
   };
-  createOrder();
+
+  const linkUrl: string = await createOrder();
+  if (linkUrl === "Something Went Wrong") {
+    return new NextResponse("Something Went Wrong", { status: 400 });
+  }
+
+  return (linkUrl);
 }
