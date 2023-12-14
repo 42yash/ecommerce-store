@@ -7,7 +7,9 @@ import Button from "@/components/ui/button";
 import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import { toast } from "react-hot-toast";
-import React from 'react';
+import React from "react";
+import { link } from "fs";
+
 let totalPrice = 0;
 
 const Summary = () => {
@@ -41,24 +43,21 @@ const Summary = () => {
   }, 0);
 
   const onCheckout = async () => {
-    const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
-      {
+    const response = await axios
+      .post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
         productIds: items.map((item) => item.id),
         orderData: formData, // Include the form data in the request
         totalPrice: totalPrice, // Include the total price in the request
-      }
-    ).catch(e => {
-      console.log("Error in axios post request");
-      console.log(e);
-    });
+      })
+      .catch((e) => {
+        console.log("Error in axios post request");
+        console.log(e);
+      });
     if (response) {
-      console.log("Response status:", response.status); // New console.log statement
-      console.log("Response data:", response.data); // New console.log statement
+      window.location.href = response.data.linkUrl;
     } else {
       console.log("No response from server"); // New console.log statement
     }
-
   };
 
   return (

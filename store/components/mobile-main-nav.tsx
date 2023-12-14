@@ -39,13 +39,13 @@ const MobileMainNav: React.FC<MobileMainNavsProps> = ({ data }) => {
 
         {/* Dialog position */}
         <div className="fixed text-left inset-0 z-40 flex">
-          <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-6 shadow-xl">
+          <Dialog.Panel className="relative float-left ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-6 shadow-xl">
             {/* Close button */}
             <div className="flex items-center justify-end px-4">
               <IconButton icon={<X size={15} />} onClick={onClose} />
             </div>
 
-            <div className="p-4  flex flex-col space-y-4">
+            <div className="p-4  flex flex-col  space-y-4">
               <MainNav data={data} />
             </div>
           </Dialog.Panel>

@@ -12,11 +12,16 @@ Cashfree.XEnvironment = Cashfree.Environment.SANDBOX;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type, Authorization",
+  "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
 };
 
 export async function OPTIONS() {
-  return NextResponse.json({}, { headers: corsHeaders });
+  return NextResponse.json({}, { 
+    headers: {
+      ...corsHeaders,
+      "Access-Control-Allow-Origin": "http://localhost:3001"
+    }
+  });
 }
 
 export async function POST(req: Request, { params }: { params: { storeId: string } }) {
@@ -112,6 +117,16 @@ export async function POST(req: Request, { params }: { params: { storeId: string
   if (linkUrl === "Something Went Wrong") {
     return new NextResponse("Something Went Wrong", { status: 400 });
   }
+    console.log(linkUrl);
+    
+  return new NextResponse(JSON.stringify({ linkUrl: linkUrl }), { 
+    status: 200,
+    headers: {
+      "Access-Control-Allow-Origin": "http://localhost:3001",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    }
+  });
 
-  return (linkUrl);
+  
 }
