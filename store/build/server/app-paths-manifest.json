@@ -1,0 +1,11 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/(routes)/checkout/page": "app/(routes)/checkout/page.js",
+  "/(routes)/sign-in/[[...sign-in]]/page": "app/(routes)/sign-in/[[...sign-in]]/page.js",
+  "/(routes)/sign-up/[[...sign-up]]/page": "app/(routes)/sign-up/[[...sign-up]]/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/(routes)/page": "app/(routes)/page.js",
+  "/(routes)/category/[categoryId]/page": "app/(routes)/category/[categoryId]/page.js",
+  "/(routes)/product/[productId]/page": "app/(routes)/product/[productId]/page.js",
+  "/(routes)/cart/page": "app/(routes)/cart/page.js"
+}
