@@ -16,10 +16,10 @@ const corsHeaders = {
 };
 
 export async function OPTIONS() {
-  return NextResponse.json({}, { 
+  return NextResponse.json({}, {
     headers: {
       ...corsHeaders,
-      "Access-Control-Allow-Origin": "http://localhost:3001"
+      "Access-Control-Allow-Origin": "http://13.233.94.72/*"
     }
   });
 }
@@ -117,9 +117,9 @@ export async function POST(req: Request, { params }: { params: { storeId: string
   if (linkUrl === "Something Went Wrong") {
     return new NextResponse("Something Went Wrong", { status: 400 });
   }
-    console.log(linkUrl);
-    
-  return new NextResponse(JSON.stringify({ linkUrl: linkUrl }), { 
+  console.log(linkUrl);
+
+  return new NextResponse(JSON.stringify({ linkUrl: linkUrl }), {
     status: 200,
     headers: {
       "Access-Control-Allow-Origin": "http://localhost:3001",
@@ -128,5 +128,5 @@ export async function POST(req: Request, { params }: { params: { storeId: string
     }
   });
 
-  
+
 }
