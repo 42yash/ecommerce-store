@@ -1,5 +1,6 @@
 "use client"
 
+import { Prisma } from "@prisma/client";
 import { ColumnDef } from "@tanstack/react-table"
 
 export type OrderColumn = {
@@ -7,7 +8,7 @@ export type OrderColumn = {
   phone: string;
   address: string;
   isPaid: boolean;
-  totalPrice: number;
+  totalPrice: Prisma.Decimal;
   products: string;
   createdAt: string;
 }
