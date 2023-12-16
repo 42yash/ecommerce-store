@@ -10,7 +10,7 @@ Cashfree.XClientSecret = process.env.CASHFREE_SECRET_KEY;
 Cashfree.XEnvironment = Cashfree.Environment.SANDBOX;
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Origin": "http://13.233.94.72:3001",
   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
   "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
 };
@@ -19,7 +19,7 @@ export async function OPTIONS() {
   return NextResponse.json({}, {
     headers: {
       ...corsHeaders,
-      "Access-Control-Allow-Origin": "http://13.233.94.72/*"
+      "Access-Control-Allow-Origin": "http://13.233.94.72:3001"
     }
   });
 }
@@ -122,7 +122,7 @@ export async function POST(req: Request, { params }: { params: { storeId: string
   return new NextResponse(JSON.stringify({ linkUrl: linkUrl }), {
     status: 200,
     headers: {
-      "Access-Control-Allow-Origin": "http://13.233.94.72/*",
+      "Access-Control-Allow-Origin": "http://13.233.94.72:3001",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
       "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
     }
