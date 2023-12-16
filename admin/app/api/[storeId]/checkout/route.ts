@@ -122,7 +122,7 @@ export async function POST(req: Request, { params }: { params: { storeId: string
   return new NextResponse(JSON.stringify({ linkUrl: linkUrl }), {
     status: 200,
     headers: {
-      "Access-Control-Allow-Origin": "http://localhost:3001",
+      "Access-Control-Allow-Origin": "http://13.233.94.72/",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
       "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
     }
