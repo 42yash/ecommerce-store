@@ -24,7 +24,9 @@ export async function OPTIONS() {
   });
 }
 
-export async function POST(req: Request, { params }: { params: { storeId: string } }) {
+export async function POST(
+  req: Request,
+  { params }: { params: { storeId: string } }) {
   if (!req) {
     console.log("Request object is undefined"); // New console.log statement
     return new NextResponse("Bad Request", { status: 400 });
