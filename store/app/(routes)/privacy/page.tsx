@@ -3,9 +3,9 @@ import React from "react";
 const PrivacyPolicy = () => {
   return (
     <div>
-      <h1>Privacy Policy</h1>
+      <h1 className="text-xl font-bold text-center">Privacy Policy</h1>
+      <p className="text-sm text-center">Updated at 11th December 2023</p>
       <p>
-        Privacy Policy Updated at 11th December 2023
         <br />
         shamansilverstore.in by Shaman Enterprises is committed to protecting
         your privacy. This Privacy Policy explains how your personal information

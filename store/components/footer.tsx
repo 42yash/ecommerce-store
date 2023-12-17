@@ -75,6 +75,11 @@ const Footer = () => {
               />
             </div>
           </ul>
+          <ul>
+            <li className="text-gray-500 text-md pt-2 pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="/Contact">Contact US</Link>
+            </li>
+          </ul>
         </div>
       </div>
       <div className="flex flex-col justify-center items-center text-center  p-5 bg-purple-50">

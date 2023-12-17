@@ -3,9 +3,9 @@ import React from "react";
 const PrivacyPolicy = () => {
   return (
     <div>
-      <h1>Refund Policy</h1>
+      <h1 className="text-xl font-bold text-center">Refund Policy</h1>
+      <p className="text-sm text-center">Updated at 11th December 2023</p>
       <p>
-        Return & Refund Policy Updated at 11th December 2023
         <br />
         Definitions and key terms
         <br />
