@@ -3,9 +3,6 @@
 # code-workspace
 *.code-workspace
 
-# environment variables
-.env
-
 # dependencies
 /node_modules
 /.pnp
