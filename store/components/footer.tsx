@@ -43,10 +43,10 @@ const Footer = () => {
           <ul>
             <p className="text-gray-800 font-bold text-xl pb-4">Company</p>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-              About
+              <Link href="/FAQS">FAQS</Link>
             </li>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-              Products
+              <Link href="/HSN">HSN Codes</Link>
             </li>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
               Pricing

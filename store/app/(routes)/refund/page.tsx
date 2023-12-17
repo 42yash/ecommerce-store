@@ -1,6 +1,6 @@
 import React from "react";
 
-const PrivacyPolicy = () => {
+const Refund = () => {
   return (
     <div>
       <h1 className="text-xl font-bold text-center">Refund Policy</h1>
@@ -103,4 +103,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default Refund;

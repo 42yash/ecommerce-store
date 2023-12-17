@@ -1,6 +1,6 @@
 import React from "react";
 
-const PrivacyPolicy = () => {
+const Contact = () => {
   return (
     <div className="items-center text-center">
       <h1>Contact Us</h1>
@@ -11,4 +11,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default Contact;
