@@ -444,10 +444,10 @@ const TermsConditions = () => {
         RELATING TO CLAIMS FOR INJUNCTIVE OR EQUITABLE RELIEF REGARDING THE
         ENFORCEMENT OR VALIDITY OF YOUR OR Shaman Enterprises
         (shamansilverstore.in)."'" INTELLECTUAL PROPERTY RIGHTS. The term
-        ‚Äúdispute means any dispute, action, or other controversy between you
-        and Shaman Enterprises (shamansilverstore.in) concerning the Services or
+        dispute means any dispute, action, or other controversy between you and
+        Shaman Enterprises (shamansilverstore.in) concerning the Services or
         this agreement, whether in contract, warranty, tort, statute,
-        regulation, ordinance, or any other legal or equitable basis. ‚ÄúDispute
+        regulation, ordinance, or any other legal or equitable basis. Dispute
         will be given the broadest possible meaning allowable under law.
       </p>
       <h2 className="text-l text-center font-bold">Notice of Dispute</h2>
