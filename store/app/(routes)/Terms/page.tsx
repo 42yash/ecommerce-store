@@ -41,18 +41,18 @@ const TermsConditions = () => {
       <p>
         These Terms & Conditions are a contract between you and Shaman
         Enterprises (shamansilverstore.in) (referred to in these Terms &
-        Conditions as Shaman Enterprises (shamansilverstore.in)", "us", "we" or
-        "our"), the provider of the Shaman Enterprises shamansilverstore.in
+        Conditions as Shaman Enterprises (shamansilverstore.in)&quot;, &quot;us&quot;, &quot;we&quot; or
+        &quot;our&quot;), the provider of the Shaman Enterprises shamansilverstore.in
         website and the services accessible from the Shaman Enterprises
         (shamansilverstore.in) website (which are collectively referred to in
-        these Terms & Conditions as the "Shaman Enterprises
-        (shamansilverstore.in)Service".
+        these Terms & Conditions as the &quot;Shaman Enterprises
+        (shamansilverstore.in)Service&quot;.
       </p>
       <p>
         You are agreeing to be bound by these Terms & Conditions. If you do not
         agree to these Terms & Conditions, please do not use the Shaman
         Enterprises (shamansilverstore.in) Service. In these Terms & Conditions,
-        "you" refers both to you as an individual and to the entity you
+        &quot;you&quot; refers both to you as an individual and to the entity you
         represent. If you violate any of these Terms & Conditions, we reserve
         the right to cancel your account or block access to your account without
         notice.
@@ -113,24 +113,24 @@ const TermsConditions = () => {
       <p>
         Thanks for shopping at Shaman Enterprises (shamansilverstore.in). We
         appreciate the fact that you like to buy the stuff we build. We also
-        want to make sure you have a rewarding experience while you're
+        want to make sure you have a rewarding experience while you&apos;re
         exploring, evaluating, and purchasing our products.
         <br />
         As with any shopping experience, there are terms and conditions that
         apply to transactions at Shaman Enterprises (shamansilverstore.in).
-        We'll be as brief as our attorneys will allow. The main thing to
+        We&apos;ll be as brief as our attorneys will allow. The main thing to
         remember is that by placing an order or making a purchase at Shaman
         Enterprises (shamansilverstore.in), you agree to the terms along with
-        Shaman Enterprises (shamansilverstore.in)."'"¬†Privacy Policy.
+        Shaman Enterprises (shamansilverstore.in).&quot;&apos;&quot;¬†Privacy Policy.
         <br />
         If, for any reason, You are not completely satisfied with any good or
-        service that we provide, don't hesitate to contact us and we will
+        service that we provide, don&apos;t hesitate to contact us and we will
         discuss any of the issues you are going through with our product.
       </p>
       <h2 className="text-l text-center font-bold">Your Suggestions</h2>
       <p>
         Any feedback, comments, ideas, improvements or suggestions
-        (collectively, "Suggestions") provided by you to Shaman Enterprises
+        (collectively, &quot;Suggestions&quot;) provided by you to Shaman Enterprises
         (shamansilverstore.in)with respect to the website shall remain the sole
         and exclusive property of Shaman Enterprises (shamansilverstore.in).
         Shaman Enterprises (shamansilverstore.in) shall be free to use, copy,
@@ -139,8 +139,8 @@ const TermsConditions = () => {
       </p>
       <h2 className="text-l text-center font-bold">Your Consent</h2>
       <p>
-        We've updated our¬†Terms & Conditions¬†to provide you with complete
-        transparency into what is being set when you visit our site and how it's
+        We&apos;ve updated our¬†Terms & Conditions¬†to provide you with complete
+        transparency into what is being set when you visit our site and how it&apos;s
         being used. By using our website, registering an account, or making a
         purchase, you hereby consent to our Terms & Conditions.
       </p>
@@ -154,13 +154,13 @@ const TermsConditions = () => {
         completeness by us. Please remember that when you use a link to go from
         the Services to another website, our Terms & Conditions are no longer in
         effect. Your browsing and interaction on any other website, including
-        those that have a link on our platform, is subject to that website's own
+        those that have a link on our platform, is subject to that website&apos;s own
         rules and policies. Such third parties may use their own cookies or
         other methods to collect information about you.
       </p>
       <h2 className="text-l text-center font-bold">Cookies</h2>
       <p>
-        Shaman Enterprises (shamansilverstore.in) uses "Cookies" to identify the
+        Shaman Enterprises (shamansilverstore.in) uses &quot;Cookies&quot; to identify the
         areas of our website that you have visited. A Cookie is a small piece of
         data stored on your computer or mobile device by your web browser. We
         use Cookies to enhance the performance and functionality of our website
@@ -208,7 +208,7 @@ const TermsConditions = () => {
         Shaman Enterprises (shamansilverstore.in) may from time to time provide
         enhancements or improvements to the features/ functionality of the
         website, which may include patches, bug fixes, updates, upgrades and
-        other modifications ("Updates").
+        other modifications (&quot;Updates&quot;).
         <br />
         Updates may modify or delete certain features and/or functionalities of
         the website. You agree that Shaman Enterprises (shamansilverstore.in)
@@ -224,7 +224,7 @@ const TermsConditions = () => {
       <p>
         We may display, include or make available third-party content (including
         data, information, applications and other products services) or provide
-        links to third-party websites or services ("Third- Party Services").
+        links to third-party websites or services (&quot;Third- Party Services&quot;).
         <br />
         You acknowledge and agree that Shaman Enterprises (shamansilverstore.in)
         shall not be responsible for any Third-Party Services, including their
@@ -236,7 +236,7 @@ const TermsConditions = () => {
         <br />
         Third-Party Services and links thereto are provided solely as a
         convenience to you and you access and use them entirely at your own risk
-        and subject to such third parties' terms and conditions.
+        and subject to such third parties&apos; terms and conditions.
       </p>
       <h2 className="text-l text-center font-bold">Term and Termination</h2>
       <p>
@@ -255,7 +255,7 @@ const TermsConditions = () => {
         Upon termination of this Agreement, you shall cease all use of the
         website and delete all copies of the website from your computer.
         Termination of this Agreement will not limit any of Shaman Enterprises
-        (shamansilverstore.in)'s rights or remedies at law or in equity in case
+        (shamansilverstore.in)&apos;s rights or remedies at law or in equity in case
         of breach by you (during the term of this Agreement) of any of your
         obligations under the present Agreement.
       </p>
@@ -263,7 +263,7 @@ const TermsConditions = () => {
         Copyright Infringement Notice
       </h2>
       <p>
-        If you are a copyright owner or such owner' agent and believe any
+        If you are a copyright owner or such owner&apos; agent and believe any
         material on our website constitutes an infringement on your copyright,
         please contact us setting forth the following information: (a) a
         physical or electronic signature of the copyright owner or a person
@@ -280,14 +280,14 @@ const TermsConditions = () => {
         You agree to indemnify and hold Shaman Enterprises
         (shamansilverstore.in) and its parents, subsidiaries, affiliates,
         officers, employees, agents, partners and licensors (if any) harmless
-        from any claim or demand, including reasonable attorneys' fees, due to
+        from any claim or demand, including reasonable attorneys&apos; fees, due to
         or arising out of your: (a) use of the website; (b) violation of this
         Agreement or any law or regulation; or (c) violation of any right of a
         third party.
       </p>
       <h2 className="text-l text-center font-bold">No Warranties</h2>
       <p>
-        The website is provided to you "AS IS" and "AS AVAILABLE" and with all
+        The website is provided to you &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; and with all
         faults and defects without warranty of any kind. To the maximum extent
         permitted under applicable law, Shaman Enterprises
         (shamansilverstore.in), on its own behalf and on behalf of its
@@ -307,7 +307,7 @@ const TermsConditions = () => {
         <br />
         Without limiting the foregoing, neither Shaman Enterprises
         (shamansilverstore.in) nor any Shaman Enterprises
-        (shamansilverstore.in)'s provider makes any representation or warranty
+        (shamansilverstore.in)&apos;s provider makes any representation or warranty
         of any kind, express or implied: (i) as to the operation or availability
         of the website, or the information, content, and materials or products
         included thereon; (ii) that the website will be uninterrupted or
@@ -364,7 +364,7 @@ const TermsConditions = () => {
         validity of the remaining provisions of this Agreement, which shall
         remain in full force and effect. No waiver of any term of this Agreement
         shall be deemed a further or continuing waiver of such term or any other
-        term, and Shaman Enterprises (shamansilverstore.in)."'" failure to
+        term, and Shaman Enterprises (shamansilverstore.in).&quot;&apos;&quot; failure to
         assert any right or provision under this Agreement shall not constitute
         a waiver of such right or provision. YOU AND Shaman Enterprises
         (shamansilverstore.in) AGREE THAT ANY CAUSE OF ACTION ARISING OUT OF OR
@@ -376,7 +376,7 @@ const TermsConditions = () => {
       <p>
         Except as provided herein, the failure to exercise a right or to require
         performance of an obligation under this Agreement shall not effect a
-        party's ability to exercise such right or require such performance at
+        party&apos;s ability to exercise such right or require such performance at
         any time thereafter nor shall be the waiver of a breach constitute
         waiver of any subsequent breach.
         <br />
@@ -394,7 +394,7 @@ const TermsConditions = () => {
       <p>
         Shaman Enterprises (shamansilverstore.in) reserves the right, at its
         sole discretion, to modify or replace this Agreement at any time. If a
-        revision is material we will provide at least 30 days' notice prior to
+        revision is material we will provide at least 30 days&apos; notice prior to
         any new terms taking effect. What constitutes a material change will be
         determined at our sole discretion. By continuing to access or use our
         website after any revisions become effective, you agree to be bound by
@@ -408,7 +408,7 @@ const TermsConditions = () => {
         supersedes all prior and contemporaneous written or oral agreements
         between you and Shaman Enterprises (shamansilverstore.in). You may be
         subject to additional terms and conditions that apply when you use or
-        purchase other Shaman Enterprises (shamansilverstore.in)'s services,
+        purchase other Shaman Enterprises (shamansilverstore.in)&apos;s services,
         which Shaman Enterprises (shamansilverstore.in) will provide to you at
         the time of such use or purchase.
       </p>
@@ -440,10 +440,10 @@ const TermsConditions = () => {
       </p>
       <h2 className="text-l text-center font-bold">Agreement to Arbitrate</h2>
       <p>
-        This section applies to any dispute EXCEPT IT DOESN' INCLUDE A DISPUTE
+        This section applies to any dispute EXCEPT IT DOESN&apos; INCLUDE A DISPUTE
         RELATING TO CLAIMS FOR INJUNCTIVE OR EQUITABLE RELIEF REGARDING THE
         ENFORCEMENT OR VALIDITY OF YOUR OR Shaman Enterprises
-        (shamansilverstore.in)."'" INTELLECTUAL PROPERTY RIGHTS. The term
+        (shamansilverstore.in).&quot;&apos;&quot; INTELLECTUAL PROPERTY RIGHTS. The term
         dispute means any dispute, action, or other controversy between you and
         Shaman Enterprises (shamansilverstore.in) concerning the Services or
         this agreement, whether in contract, warranty, tort, statute,
@@ -468,7 +468,7 @@ const TermsConditions = () => {
       </p>
       <h2 className="text-l text-center font-bold">Binding Arbitration</h2>
       <p>
-        If you and Shaman Enterprises (shamansilverstore.in) don' resolve any
+        If you and Shaman Enterprises (shamansilverstore.in) don&apos; resolve any
         dispute by informal negotiation, any other effort to resolve the dispute
         will be conducted exclusively by binding arbitration as described in
         this section. You are giving up the right to litigate (or participate in
@@ -477,7 +477,7 @@ const TermsConditions = () => {
         with the commercial arbitration rules of the American Arbitration
         Association. Either party may seek any interim or preliminary injunctive
         relief from any court of competent jurisdiction, as necessary to protect
-        the party' rights or property pending the completion of arbitration. Any
+        the party&apos; rights or property pending the completion of arbitration. Any
         and all legal, accounting, and other costs, fees, and expenses incurred
         by the prevailing party shall be borne by the non-prevailing party.
       </p>
@@ -570,7 +570,7 @@ const TermsConditions = () => {
         prior notice.
         <br />
         The Shaman Enterprises (shamansilverstore.in) Service and its contents
-        are provided "as is" and "as available" without any warranty or
+        are provided &quot;as is&quot; and &quot;as available&quot; without any warranty or
         representations of any kind, whether express or implied. Shaman
         Enterprises (shamansilverstore.in) is a distributor and not a publisher
         of the content supplied by third parties; as such, Shaman Enterprises
@@ -597,7 +597,7 @@ const TermsConditions = () => {
       </p>
       <h2 className="text-l text-center font-bold">Contact Us</h2>
       <p className="text-center">
-        Don't hesitate to contact us if you have any questions.
+        Don&apos;t hesitate to contact us if you have any questions.
         <br />
         -Via Email: shamanenterprisesbangalore@gmail.com
       </p>
