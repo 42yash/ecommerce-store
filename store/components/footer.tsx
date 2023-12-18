@@ -37,6 +37,9 @@ const Footer = () => {
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
               <Link href="/refund">Refund Policy</Link>
             </li>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="/Cashfree">Cash-Free Policy</Link>
+            </li>
           </ul>
         </div>
         <div className="p-5">
