@@ -10,7 +10,7 @@ Cashfree.XClientSecret = process.env.CASHFREE_SECRET_KEY;
 Cashfree.XEnvironment = Cashfree.Environment.PRODUCTION;
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "https:www.shamansilverstore.in/*",
+  "Access-Control-Allow-Origin": "https://shamansilverstore.in/*",
   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
   "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
 };
@@ -19,7 +19,7 @@ export async function OPTIONS() {
   return NextResponse.json({}, {
     headers: {
       ...corsHeaders,
-      "Access-Control-Allow-Origin": "https:www.shamansilverstore.in/*"
+      "Access-Control-Allow-Origin": "https://shamansilverstore.in/*"
     }
   });
 }
@@ -124,7 +124,7 @@ export async function POST(
   return new NextResponse(JSON.stringify({ linkUrl: linkUrl }), {
     status: 200,
     headers: {
-      "Access-Control-Allow-Origin": "https:www.shamansilverstore.in/*",
+      "Access-Control-Allow-Origin": "https://shamansilverstore.in/*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
       "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
     }
