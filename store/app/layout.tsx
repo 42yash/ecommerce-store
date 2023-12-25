@@ -10,8 +10,8 @@ import { env } from 'node:process';
 const font = Urbanist({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Store',
-  description: 'Store - The place for all your purchases.',
+  title: 'Shaman Silver Store',
+  description: 'Shaman Silver Store',
 }
 
 export default function RootLayout({
