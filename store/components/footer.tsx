@@ -57,14 +57,15 @@ const Footer = () => {
           <ul>
             <p className="text-gray-800 font-bold text-xl pb-4">Contact </p>
             <div className="flex flex-row gap-2 items-right">
-              <FaInstagram
-                href="https://www.instagram.com/shamansilverstore.in"
-                className="text-2xl cursor-pointer hover:text-purple-600"
-              />
-              <FaTwitter
-                href="https://twitter.com/SilverByShaman"
-                className="text-2xl cursor-pointer hover:text-blue-600"
-              />
+              <a href="https://www.instagram.com/shamansilverstore.in">
+                {" "}
+                <FaInstagram className="text-2xl cursor-pointer hover:text-purple-600" />
+              </a>
+
+              <a href="https://twitter.com/SilverByShaman">
+                <FaTwitter className="text-2xl cursor-pointer hover:text-blue-600" />
+              </a>
+
               <FaWhatsapp
                 href=""
                 className="text-2xl cursor-pointer hover:text-green-600"
