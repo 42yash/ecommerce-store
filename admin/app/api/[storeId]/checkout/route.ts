@@ -7,7 +7,7 @@ import { link } from "fs";
 
 Cashfree.XClientId = process.env.CASHFREE_APP_ID;
 Cashfree.XClientSecret = process.env.CASHFREE_SECRET_KEY;
-Cashfree.XEnvironment = Cashfree.Environment.PRODUCTION;
+Cashfree.XEnvironment = Cashfree.Environment.SANDBOX;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "https://shamansilverstore.in",

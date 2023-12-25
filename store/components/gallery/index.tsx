@@ -28,6 +28,7 @@ const Gallery: React.FC<GalleryProps> = ({
           <Tab.Panel key={image.id}>
             <div className="aspect-square relative h-full w-full sm:rounded-lg overflow-hidden">
               <NextImage
+                priority={true} loading="eager"
                 fill
                 src={image.url}
                 alt="Image"
