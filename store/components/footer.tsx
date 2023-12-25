@@ -2,27 +2,13 @@ import React from "react";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className="bg-white border-t ">
       <div className="bg-purple-50 h-1/2 w-full flex md:flex-row flex-col justify-around items-start p-20">
-        <div className="p-5 ">
-          <ul>
-            <div className="flex gap-6 pb-5">
-              <img
-                className="h-80 w-15 ml-auto"
-                src="https://i.pinimg.com/originals/5e/79/4a/5e794ae64d84c9220cbbf94f336b7ab0.jpg"
-              />
-              {/* <FaInstagram className="text-2xl cursor-pointer hover:text-yellow-600" />
-              <FaTwitter className="text-2xl cursor-pointer hover:text-blue-600" />
-              <FaLinkedin className="text-2xl cursor-pointer hover:text-blue-600" />
-              <FaYoutube className="text-2xl cursor-pointer hover:text-red-600" /> */}
-            </div>
-          </ul>
-        </div>
         <div className="p-5">
           <ul>
             <p className="text-gray-800 font-bold text-xl pb-4">
@@ -65,15 +51,12 @@ const Footer = () => {
               <a href="https://twitter.com/SilverByShaman">
                 <FaTwitter className="text-2xl cursor-pointer hover:text-blue-600" />
               </a>
-
-              <FaWhatsapp
-                href=""
-                className="text-2xl cursor-pointer hover:text-green-600"
-              />
-              <FaFacebook
-                href=""
-                className="text-2xl cursor-pointer hover:text-blue-400"
-              />
+              <a href="https://www.linkedin.com/company/shaman-silver-store?trk=blended-typeahead">
+                <FaLinkedin className="text-2xl cursor-pointer hover:text-blue-500" />
+              </a>
+              <a href="https://m.facebook.com/people/Shaman-Silver-Store/61554681458951/">
+                <FaFacebook className="text-2xl cursor-pointer hover:text-blue-400" />
+              </a>
             </div>
           </ul>
           <ul>
